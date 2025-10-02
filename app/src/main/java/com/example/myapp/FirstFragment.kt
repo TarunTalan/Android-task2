@@ -31,12 +31,7 @@ class FirstFragment : Fragment() {
             }
         }
         registerButton.setOnClickListener {
-            val thirdFragment = ThirdFragment()
-            parentFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, thirdFragment)
-                addToBackStack(null)
-                commit()
-            }
+            (activity as? MainActivity)?.navigateTo(SecondFragment())
         }
     }
 }
