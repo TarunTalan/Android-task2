@@ -13,4 +13,6 @@
     <string name="email">Email</string>
     <string name="login_here">Login here</string>
     <string name="icon">Icon</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_an_account_so_you_can_explore_all_the_existing_jobs">Create an account so you can explore all the existing jobs</string>
 </resources>

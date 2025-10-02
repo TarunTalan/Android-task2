@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +17,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="Create Account"
+        android:text="@string/create_account"
         android:textColor="#1F41BB"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -30,7 +34,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:paddingHorizontal="50dp"
-        android:text="Create an account so you can explore all the existing jobs"
+        android:text="@string/create_an_account_so_you_can_explore_all_the_existing_jobs"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +49,7 @@
         android:background="@drawable/border2"
         android:ems="15"
         android:hint="Email"
+        android:layout_marginVertical="10dp"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="15dp"
         android:paddingVertical="15dp"
@@ -55,22 +60,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/createAccountText" />
 
-    <EditText
-        android:id="@+id/confirmPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border2"
-        android:ems="15"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        android:paddingHorizontal="15dp"
-        android:paddingVertical="15dp"
-        android:textColor="#000"
-        android:textColorHint="#AD131316"
-        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+
 
     <EditText
         android:id="@+id/Password"
@@ -82,12 +72,30 @@
         android:inputType="textPassword"
         android:paddingHorizontal="15dp"
         android:paddingVertical="15dp"
+        android:layout_marginVertical="10dp"
         android:textColor="#000"
         android:textColorHint="#AD131316"
         app:layout_constraintBottom_toTopOf="@+id/confirmPassword"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/EmailAddress" />
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border2"
+        android:ems="15"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="15dp"
+        android:layout_marginVertical="10dp"
+        android:textColor="#000"
+        android:textColorHint="#AD131316"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <Button
         android:id="@+id/signUpButton"
@@ -97,6 +105,7 @@
         android:backgroundTint="#311B92"
         android:fontFamily="sans-serif-medium"
         android:paddingVertical="9dp"
+        android:layout_marginVertical="10dp"
         android:text="Sign up"
         android:textColor="#FFFFFFFF"
         android:textColorLink="#1F41BB"
@@ -115,6 +124,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#3b3b3b"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toTopOf="@+id/continueWith"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -127,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="20dp"
+        android:layout_marginVertical="20dp"
         android:text="Or continue with"
         android:textColor="#1F41BB"
         android:textSize="16sp"
@@ -209,3 +220,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
