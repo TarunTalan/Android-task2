@@ -25,6 +25,7 @@ class ThirdFragment : Fragment() {
             val secondFragment = SecondFragment()
             parentFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment, secondFragment)
+                addToBackStack(null)
                 commit()
             }
         }

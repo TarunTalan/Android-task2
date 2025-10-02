@@ -22,17 +22,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         if (savedInstanceState == null) {
-            val initialFragment = FirstFragment()
-            setCurrentFragment(initialFragment, false)
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.flFragment, FirstFragment())
+            transaction.commit()
         }
     }
-    private fun setCurrentFragment(fragment: Fragment, addToBackStack: Boolean) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.flFragment, fragment)
-
-        if (addToBackStack) {
-            transaction.addToBackStack(null)
-        }
-        transaction.commit()
     }
-}

@@ -26,6 +26,7 @@ class FirstFragment : Fragment() {
             val secondFragment = SecondFragment()
             parentFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment, secondFragment)
+                addToBackStack(null)
                 commit()
             }
         }
@@ -33,6 +34,7 @@ class FirstFragment : Fragment() {
             val thirdFragment = ThirdFragment()
             parentFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment, thirdFragment)
+                addToBackStack(null)
                 commit()
             }
         }
