@@ -3,4 +3,6 @@
     <string name="explore">Explore all the existing job roles based on your interest and study major</string>
     <string name="discover">Discover Your Dream Job Here</string>
     <string name="welcome_back_you_ve_been_missed">Welcome back you\'ve been missed!</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
 </resources>
