@@ -97,6 +97,7 @@
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
+        android:backgroundTint="#311B92"
         android:fontFamily="sans-serif-medium"
         android:paddingVertical="9dp"
         android:text="Sign in"
@@ -109,12 +110,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+    <TextView
+        android:id="@+id/continueWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:gravity="center"
+        android:text="Or continue with"
+        android:textColor="#1F41BB"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createNewAcc" />
+
     <Button
         android:id="@+id/createNewAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#FCF5FDFF"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#fff"
         android:gravity="center"
         android:paddingVertical="12dp"
         android:text="Create new account"
@@ -125,5 +142,47 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+
+    <ImageView
+        android:id="@+id/googleIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/facebookIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continueWith"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/vector" />
+
+    <ImageView
+        android:id="@+id/facebookIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="70px"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/appleIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/googleIcon"
+        app:layout_constraintTop_toBottomOf="@+id/continueWith"
+        app:srcCompat="@drawable/vector__1_" />
+
+    <ImageView
+        android:id="@+id/appleIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/facebookIcon"
+        app:layout_constraintTop_toBottomOf="@+id/continueWith"
+        app:layout_constraintVertical_bias="0"
+        app:srcCompat="@drawable/frame_1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
