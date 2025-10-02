@@ -8,40 +8,41 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/loginText"
+        android:id="@+id/createAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="Login here"
+        android:text="Create Account"
         android:textColor="#1F41BB"
-        android:textSize="32sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
+        app:layout_constraintBottom_toTopOf="@+id/createAccountText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="225dp"
+        android:id="@+id/createAccountText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="@string/welcome_back_you_ve_been_missed"
-        android:textSize="20sp"
+        android:paddingHorizontal="50dp"
+        android:text="Create an account so you can explore all the existing jobs"
+        android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/EmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginText" />
+        app:layout_constraintTop_toBottomOf="@+id/createAccount" />
 
     <EditText
         android:id="@+id/EmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:background="@drawable/border2"
         android:ems="15"
         android:hint="Email"
@@ -54,13 +55,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+        app:layout_constraintTop_toBottomOf="@+id/createAccountText" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/confirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:background="@drawable/border2"
         android:ems="15"
         android:hint="Password"
@@ -69,46 +69,60 @@
         android:paddingVertical="15dp"
         android:textColor="#000"
         android:textColorHint="#AD131316"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border2"
+        android:ems="15"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="15dp"
+        android:textColor="#000"
+        android:textColorHint="#AD131316"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailAddress" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="52dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="Forgot your password?"
-        android:textColor="#1F41BB"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/signInButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        app:layout_constraintVertical_bias="1.0" />
-
     <Button
-        android:id="@+id/signInButton"
+        android:id="@+id/signUpButton"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
         android:backgroundTint="#311B92"
         android:fontFamily="sans-serif-medium"
         android:paddingVertical="9dp"
-        android:text="Sign in"
+        android:text="Sign up"
         android:textColor="#ffff"
         android:textSize="19sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/createNewAcc"
+        app:layout_constraintBottom_toTopOf="@+id/alreadyHaveAnAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
+
+    <TextView
+        android:id="@+id/alreadyHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have account"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/continueWith"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
 
     <TextView
         android:id="@+id/continueWith"
@@ -123,25 +137,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createNewAcc" />
-
-    <Button
-        android:id="@+id/createNewAcc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#fff"
-        android:gravity="center"
-        android:paddingVertical="12dp"
-        android:text="Create new account"
-        android:textColor="#3b3b3b"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/googleIcon"
@@ -161,14 +157,14 @@
         android:id="@+id/facebookIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginHorizontal="70dp"
+        android:layout_marginHorizontal="40dp"
         android:layout_marginTop="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/appleIcon"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toEndOf="@+id/googleIcon"
         app:layout_constraintTop_toBottomOf="@+id/continueWith"
+        app:layout_constraintVertical_bias="0"
         app:srcCompat="@drawable/vector__1_" />
 
     <ImageView
