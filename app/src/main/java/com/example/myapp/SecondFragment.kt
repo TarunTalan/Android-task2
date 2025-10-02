@@ -22,11 +22,7 @@ class SecondFragment : Fragment() {
 
         val createNewAcc: TextView = view.findViewById(R.id.createNewAcc)
         createNewAcc.setOnClickListener {
-            val thirdFragment = ThirdFragment()
-            parentFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, thirdFragment)
-                commit()
-            }
+            (activity as? MainActivity)?.navigateTo(ThirdFragment())
         }
     }
 }

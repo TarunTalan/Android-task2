@@ -22,12 +22,7 @@ class ThirdFragment : Fragment() {
 
         val alreadyHaveAccountButton: TextView = view.findViewById(R.id.alreadyHaveAnAccount)
         alreadyHaveAccountButton.setOnClickListener {
-            val secondFragment = SecondFragment()
-            parentFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, secondFragment)
-                commit()
-            }
+            (activity as? MainActivity)?.navigateTo(SecondFragment())
         }
     }
 }
-    
