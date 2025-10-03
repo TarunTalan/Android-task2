@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 
 class FirstFragment : Fragment() {
 
@@ -14,24 +14,13 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_first, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val loginButton: Button = view.findViewById(R.id.loginButton)
-        val registerButton: TextView = view.findViewById(R.id.registerButton)
-        loginButton.setOnClickListener {
-            val secondFragment = SecondFragment()
-            parentFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment, secondFragment)
-                addToBackStack(null)
-                commit()
+        val view = inflater.inflate(R.layout.fragment_first, container, false)
+        view.findViewById<TextView>(R.id.loginButton).setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
             }
+        view.findViewById<TextView>(R.id.registerButton).setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_thirdFragment)
         }
-        registerButton.setOnClickListener {
-            (activity as? MainActivity)?.navigateTo(SecondFragment())
-        }
+        return view
     }
 }

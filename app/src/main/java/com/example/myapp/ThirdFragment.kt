@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 
 class ThirdFragment : Fragment() {
 
@@ -14,15 +15,10 @@ class ThirdFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_third, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val alreadyHaveAccountButton: TextView = view.findViewById(R.id.alreadyHaveAnAccount)
-        alreadyHaveAccountButton.setOnClickListener {
-            (activity as? MainActivity)?.navigateTo(SecondFragment())
+        val view = inflater.inflate(R.layout.fragment_third, container, false)
+        view.findViewById<TextView>(R.id.alreadyHaveAnAccount).setOnClickListener {
+            findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
         }
+        return view
     }
 }
